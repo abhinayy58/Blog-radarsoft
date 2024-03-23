@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
-mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASS}@radar.bvnwvbm.mongodb.net/blog?retryWrites=true&w=majority&appName=rada`, {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
 });
 const db = mongoose.connection;
