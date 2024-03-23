@@ -10,14 +10,13 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/my-blog-db", {
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASS}@radar.bvnwvbm.mongodb.net/blog?retryWrites=true&w=majority&appName=rada`, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
 });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 db.once("open", () => {
-  console.log("Connected to MongoDB", db.host, db.port);
+  console.log("Connected to MongoDB");
 });
 
 app.use(express.urlencoded({ extended: true }));
