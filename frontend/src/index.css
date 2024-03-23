@@ -1,0 +1,140 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #242424;
+  box-sizing: border-box;
+  font-weight: 500;
+  text-decoration: inherit;
+  color: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.searchBox {
+  margin: 20px 0;
+}
+
+.createButton {
+  display: flex;
+  justify-content: end;
+  margin: 20px 0;
+}
+
+.buttonBlog {
+  background-color: #6610f2;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.buttonBlog:hover {
+  background-color: #6f42c1 !important;
+  color: #ffffff;
+}
+.buttonBlog:active,
+.buttonBlog:focus-within {
+  background-color: #6f42c1 !important;
+}
+
+.inputSearch {
+  background-color: #242424;
+  color: #213547;
+}
+
+.backGroundChange {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.toastMessage {
+  position: absolute;
+  left: 10%;
+}
+
+.blogCard {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.cardBlogText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+.cardBlogMobile {
+  width: 22rem;
+  height: 18rem;
+}
+.blogDescription {
+  padding: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  margin: 20px;
+  background: #6f42c1;
+  height: 80vh;
+}
+
+.blogDescriptionSection {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: #6610f2;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .blogCard {
+    justify-content: center;
+  }
+  .cardBlogMobile {
+    width: 100% !important;
+  }
+}
+
